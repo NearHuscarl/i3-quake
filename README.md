@@ -17,6 +17,10 @@ Quake mode for terminal in [i3](https://github.com/i3/i3) window manager
 	* xfce4-terminal
 	* xterm
 
+## Installation
+* Install all dependencies
+* Download the python file and put it in `$PATH`
+
 ## Usage
 Open terminal dropdown in quake style (or bottom up). Each workspace can
 have one terminal in quake mode. If the focused workspace already have
@@ -42,7 +46,7 @@ optional arguments:
   -t TERM, --term TERM  terminal name (default is xterm)
 ```
 
-## Examples:
+## Examples
 ```bash
 $ i3_quake # default use xterm and open $SHELL
 ```
@@ -53,7 +57,7 @@ $ i3_quake -H 0.6 -t termite htop
 $ i3_quake -p bottom -H 0.2 -t xfce4-terminal ipython
 ```
 
-## Flickering:
+## Flickering
 Add this line to i3 config (~/.config/i3/config) to hide the terminal
 immediately when created to prevent flickering issue
 
