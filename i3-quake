@@ -115,7 +115,7 @@ def toggle_quake(term, pos, ratio, cmd):
 				title=get_name(), expanded=quake_cmd, string=quoted(quake_cmd))
 
 		try:
-			print(term_cmd)
+			# print(term_cmd)
 			os.execvp(term_cmd[0], term_cmd)
 		except FileNotFoundError:
 			print('{} executable not found. Please select another terminal using --term flag'
