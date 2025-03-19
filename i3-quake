@@ -83,11 +83,11 @@ def get_current_workspace_info():
 	workspace = get_current_workspace()
 	tree = i3.get_tree()
 	return [c for c in tree.descendents()
-			if c.type == 'workspace' and c.name == workspace['name']][0]
+			if c.type == 'workspace' and c.name == workspace.name][0]
 
 def get_name():
 	""" get quake terminal name of current workspace """
-	ws_num = get_current_workspace()['num']
+	ws_num = get_current_workspace().num
 	return QUAKE_NAME + str(ws_num)
 
 def move_back(title):
@@ -128,10 +128,10 @@ def toggle_quake(term, pos, ratio, cmd):
 def quake(title, pos, ratio):
 	""" resize terminal to make it looks top down or bottom up """
 	workspace = get_current_workspace()
-	ws_x = workspace['rect']['x']
-	ws_y = workspace['rect']['y']
-	ws_width = workspace['rect']['width']
-	ws_height = workspace['rect']['height']
+	ws_x = workspace.rect.x
+	ws_y = workspace.rect.y
+	ws_width = workspace.rect.width
+	ws_height = workspace.rect.height
 
 	width = ws_width
 	height = int(ws_height * ratio)
